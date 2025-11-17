@@ -14,7 +14,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -35,45 +35,34 @@ const { title } = Astro.props.frontmatter || Astro.props;
     <meta name="generator" content={Astro.generator} />
 
     <meta name="description" content="KiraKira 是一个 Apple TV 上的简洁播放器。" />
-    <link rel="canonical" href={Astro.url} />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="ZhaoHe Studio" />
+    <link rel="canonical" href={Astro.url.href} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="KiraKira" />
     <meta property="og:title" content={`KiraKira · ${title}`} />
     <meta property="og:description" content="KiraKira 是一个 Apple TV 上的简洁播放器。" />
-    <meta property="og:image" content="/KiraKiraLogo.png" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content="/android-chrome-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="KiraKira 标识" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`KiraKira · ${title}`} />
     <meta name="twitter:description" content="KiraKira 是一个 Apple TV 上的简洁播放器。" />
-    <meta name="twitter:image" content="/KiraKiraLogo.png" />
+    <meta name="twitter:image" content="/android-chrome-512x512.png" />
+    <meta name="apple-mobile-web-app-title" content="KiraKira" />
 
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
 
-    <script type="application/ld+json" is:inline>{JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: "KiraKira",
-      operatingSystem: "tvOS",
-      applicationCategory: "MultimediaApplication",
-      description: "KiraKira 是一个 Apple TV 上的简洁播放器。",
-      url: Astro.url.href,
-      image: "/KiraKiraLogo.png",
-      publisher: { "@type": "Organization", name: "ZhaoHe Studio" }
-    })}</script>
+    <script type="application/ld+json" src="/structured-data.json" is:inline></script>
 
-    <script is:inline>
-      try {
-        const t = localStorage.getItem("theme");
-        if (t === "dark") {
-          document.documentElement.classList.add("dark");
-        } else if (t === "light") {
-          document.documentElement.classList.remove("dark");
-        }
-      } catch {}
-    </script>
+    <script src="/js/theme-init.js" is:inline></script>
 
     <title>KiraKira · {title}</title>
   </head>

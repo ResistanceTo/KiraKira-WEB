@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "KiraKira",
+  "operatingSystem": "tvOS",
+  "applicationCategory": "MultimediaApplication",
+  "description": "KiraKira 是一个 Apple TV 上的简洁播放器。",
+  "url": "https://kirakira.zhaohe.org/",
+  "image": "/android-chrome-512x512.png",
+  "publisher": { "@type": "Organization", "name": "ZhaoHe Studio" }
+}
