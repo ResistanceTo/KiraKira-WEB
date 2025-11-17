@@ -1,0 +1,69 @@
+---
+import Layout from "../Layout.astro";
+---
+
+<Layout title="Apple TV 简洁播放器">
+  <section
+    class="m-auto flex max-w-7xl flex-col items-center justify-center gap-y-7 p-5 transition-all duration-75 ease-out lg:gap-y-10"
+  >
+    <div class="flex flex-col items-center justify-center gap-y-4 lg:gap-y-6">
+      <img
+        src="/KiraKira.webp"
+        alt="KiraKira Preview"
+        class="w-full max-w-4xl select-none rounded-lg shadow-lg lg:max-w-5xl"
+        loading="lazy"
+        ondragstart="return false;"
+      />
+      <p
+        class="text-center text-lg font-medium text-black dark:text-white lg:w-1/2 lg:text-2xl"
+      >
+        专为 Apple TV 设计的简洁播放器
+      </p>
+      <div class="flex items-center gap-x-4">
+        <!-- <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download on the App Store"
+          class="inline-flex items-center gap-x-3 rounded-xl border border-black/10 bg-white px-4 py-3 text-black hover:bg-gray-50 dark:border-white/20 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
+        >
+          <img
+            src="/appstore-logo.png"
+            alt="App Store"
+            class="h-8 w-8 rounded"
+            width="32"
+            height="32"
+            ondragstart="return false;"
+          />
+          <span class="flex flex-col leading-tight">
+            <span class="text-xs uppercase tracking-wider">download on the</span
+            >
+            <span class="text-lg font-bold">App Store</span>
+          </span>
+        </a> -->
+
+        <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download on TestFlight"
+          class="inline-flex items-center gap-x-3 rounded-xl border border-black/10 bg-white px-4 py-3 text-black hover:bg-gray-50 dark:border-white/20 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
+        >
+          <img
+            src="/testflight-logo.png"
+            alt="TestFlight"
+            class="h-8 w-8 rounded"
+            width="32"
+            height="32"
+            ondragstart="return false;"
+          />
+          <span class="flex flex-col leading-tight">
+            <span class="text-xs uppercase tracking-wider">download on the</span
+            >
+            <span class="text-lg font-bold">TestFlight</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
